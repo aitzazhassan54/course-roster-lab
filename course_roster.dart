@@ -27,7 +27,7 @@ void main() {
   print(
     '$courseTitle | Capacity: $capacity | Enrolled: ${enrolledStudents.length}',
   );
-
+  //part 3
   String? teacherEmail;
   print(teacherEmail ?? 'TBA');
 
@@ -36,4 +36,21 @@ void main() {
   print('Enrollment code: $enrollmentCode');
 
   print(teacherEmail?.length ?? 0);
+  //part 4
+  // ---------- Part 4: Formatting Strings ----------
+  String rawNames = ' Aitzaz , Ahmad, Mehdi , abu bakr  ';
+  List<String> cleanNames = [];
+  for (var name in rawNames.split(',')) {
+    cleanNames.add(name.trim());
+  }
+  print(cleanNames);
+
+  String courseDescription =
+      '''
+  $courseTitle
+  Credit Hours: $creditHours
+  Created At: $createdAt
+  ''';
+  print(courseDescription);
+  print('Seats left: ${capacity - enrolledStudents.length}');
 }
