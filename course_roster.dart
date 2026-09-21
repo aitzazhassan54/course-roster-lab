@@ -12,7 +12,7 @@ void printWelcome(String appName) {
 void main() {
   printWelcome('Course Roster Manager');
   String generateCode(String title) =>
-      title.substring(0, 2).toUpperCase() + '201';
+      title.substring(0, 2).toUpperCase() + '101';
 
   const int maxCapacity = 4;
   final DateTime createdAt = DateTime.now();
