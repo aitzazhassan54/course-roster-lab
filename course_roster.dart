@@ -102,4 +102,23 @@ void main() {
 
   String statusTag = isOpen ? 'OPEN' : 'FULL';
   print(statusTag);
+
+  //  Part 7: Reports & Loops
+  for (var student in enrolledStudents) {
+    print(student);
+  }
+
+  attendanceCount.forEach((student, count) {
+    print('$student: $count');
+  });
+
+  List<String> announcements = [
+    'Welcome to $courseTitle',
+    if (!isOpen) 'Course is FULL — waitlist open',
+    for (var student in waitlist)
+      'Reminder: $student, please confirm attendance',
+  ];
+  for (var announcement in announcements) {
+    print(announcement);
+  }
 }
