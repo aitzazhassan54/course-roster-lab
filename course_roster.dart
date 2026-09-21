@@ -53,4 +53,31 @@ void main() {
   ''';
   print(courseDescription);
   print('Seats left: ${capacity - enrolledStudents.length}');
+
+  // ---------- Part 5: Operators in Action ----------
+  int fullGroups = enrolledStudents.length ~/ 3;
+  int leftover = enrolledStudents.length % 3;
+  print('Full groups of 3: $fullGroups, leftover: $leftover');
+
+  Object formInput = 'twenty-two';
+  if (formInput is String) {
+    print('This is text!');
+  }
+  if (formInput is! int) {
+    print('This is definitely not an int!');
+  }
+
+  int? highScore;
+  highScore ??= 0;
+  highScore ??= 100;
+  print(highScore);
+
+  var cart = []
+    ..add('Pencil')
+    ..add('Eraser');
+  print(cart);
+
+  List<String>? maybeCart;
+  maybeCart?..add('Pen');
+  print(maybeCart);
 }
