@@ -55,6 +55,7 @@ void main() {
   print('Seats left: ${capacity - enrolledStudents.length}');
 
   // ---------- Part 5: Operators in Action ----------
+  // ---------- Part 5: Operators in Action ----------
   int fullGroups = enrolledStudents.length ~/ 3;
   int leftover = enrolledStudents.length % 3;
   print('Full groups of 3: $fullGroups, leftover: $leftover');
@@ -67,19 +68,20 @@ void main() {
     print('This is definitely not an int!');
   }
 
-  int? highScore;
-  highScore ??= 0;
-  highScore ??= 100;
-  print(highScore);
+  StringBuffer reportBuffer = StringBuffer();
+  reportBuffer
+    ..write('Report: $courseTitle')
+    ..write(' | Cap: $capacity')
+    ..write(' | Roster: ${enrolledStudents.length}');
+  print(reportBuffer.toString());
 
-  var cart = []
-    ..add('Pencil')
-    ..add('Eraser');
-  print(cart);
+  List<String>? extraNotes;
+  extraNotes?..add('Room change pending');
+  print('Extra notes: $extraNotes');
 
-  List<String>? maybeCart;
-  maybeCart?..add('Pen');
-  print(maybeCart);
+  int? bonusSeats;
+  bonusSeats ??= 0;
+  print('Bonus seats: $bonusSeats');
 
   if (isOpen && enrolledStudents.length < capacity) {
     print("You're in! Welcome aboard.");
