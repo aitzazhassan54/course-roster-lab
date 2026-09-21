@@ -80,4 +80,26 @@ void main() {
   List<String>? maybeCart;
   maybeCart?..add('Pen');
   print(maybeCart);
+
+  if (isOpen && enrolledStudents.length < capacity) {
+    print("You're in! Welcome aboard.");
+  } else {
+    print('Sorry, enrollment is closed or the course is full.');
+  }
+
+  int enrollmentStatusCode = 200;
+  switch (enrollmentStatusCode) {
+    case 200:
+      print('Enrolled');
+      break;
+    case 404:
+      print('Course not found');
+      break;
+    default:
+      print('Unknown error');
+      break;
+  }
+
+  String statusTag = isOpen ? 'OPEN' : 'FULL';
+  print(statusTag);
 }
